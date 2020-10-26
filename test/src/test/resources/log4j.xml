@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="kr.co.ict3">
+	<logger name="kr.co.test">
 		<level value="info" />
 	</logger>
 	

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="BrdFreeMapper">
+
+	<select id="list"
+			resultType="kr.co.test.BrdFreeDTO">
+	select bno, title, writer, pwd, cnts
+			, view_cnt, like_cnt, unlike_cnt, write_date
+		from free_board
+	</select>
+
+	<select id="detail"
+			parameterType="java.lang.String"
+			resultType="kr.co.test.BrdFreeDTO">
+	select bno, title, writer, pwd, cnts
+			, view_cnt, like_cnt, unlike_cnt, write_date
+		from free_board
+		where bno = #{bno}
+	</select>
+
+
+</mapper>
